@@ -13,7 +13,21 @@
         <div><img src="./icons/library.svg" alt="Library icon"></div>
     </div>
     <p>Welcome to your personal library—track your reads and manage your collection!</p>
-    <div class="bttn-div"><button>Add book <img src="./icons/plus.svg" alt="plus icon"></button></div>
+    <div class="bttn-div"><button>New Book <img src="./icons/plus.svg" alt="plus icon"></button></div>
     <div class="books"></div>
+
+    <dialog>
+        <form action="" method="dialog">
+            <label for="book">Book: </label>
+            <input id="book" name="book" required>
+            <label for="author">Author: </label>
+            <input id="author" name="author" required>
+            <label for="pages">No. of pages: </label>
+            <input id="pages" name="pages">
+            <label for="status">Read: </label>
+            <input type="checkbox" id="status" name="status">
+          <button>Submit</button>
+        </form>
+    </dialog>
 </body>
 </html>

@@ -80,7 +80,7 @@ button:active{
     max-height:200px;
     min-height: 200px;
     max-width: 500px;
-    background-color: #eff6ff;
+    background: linear-gradient(#bacce5,white);
     border-radius: 20px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
     
@@ -91,6 +91,10 @@ button:active{
     padding: 10px;
 }
 
+.card button{
+    font-size: 12px;
+}
+
 .delete-div{
     display: flex;
     justify-content: center;
@@ -98,6 +102,8 @@ button:active{
 
 dialog{
     border-radius: 33px;
+    border: 3px solid #9dbbe4;
+    background:linear-gradient(#9dbbe4,#bacce5,white);
 }
 
 dialog[open]{
@@ -110,7 +116,6 @@ dialog[open]{
 form{
     border-radius: 30px;
     width: 230px;
-    background-color: #e0f2fe;
     padding: 10px;
     display: flex;
     flex-direction: column;

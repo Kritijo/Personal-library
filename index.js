@@ -22,6 +22,17 @@ form.addEventListener("submit",(event)=>{
     form.reset();
 });
 
+function Book(book,author,pages,status){
+    this.book = book;
+    this.author = author;
+    this.pages = pages;
+    this.status = status ? "read" : "not read yet";
+}
+
+Book.prototype.info = function(){
+    return `${this.book} by ${this.author}, ${this.pages} pages, ${this.status}`
+}
+
 
 
 

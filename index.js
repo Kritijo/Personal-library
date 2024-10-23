@@ -59,7 +59,6 @@ function createCards(book){
 
     changeStatus.textContent = "Change Status"
     changeStatus.addEventListener("click",()=>{
-        console.log(book.status)
         book.status = (book.status === "read") ? "not read yet" : "read";
         cardText4.textContent = `Status : ${book.status}`;
     })

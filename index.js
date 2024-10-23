@@ -49,6 +49,7 @@ function createCards(book){
     let cardText4 = document.createElement("div");
     let cardText5 = document.createElement("div");
     let deleteCard = document.createElement("button");
+    let changeStatus = document.createElement("button");
     cardText5.className = "delete-div";
 
     cardText1.textContent = `Book : ${book.bookName}`;
@@ -56,14 +57,21 @@ function createCards(book){
     cardText3.textContent = `Pages : ${book.pages}`;
     cardText4.textContent = `Status : ${book.status}`;
 
-    deleteCard.textContent = "Delete Card"
+    changeStatus.textContent = "Change Status"
+    changeStatus.addEventListener("click",()=>{
+        console.log(book.status)
+        book.status = (book.status === "read") ? "not read yet" : "read";
+        cardText4.textContent = `Status : ${book.status}`;
+    })
+
+    deleteCard.textContent = "Delete Card";
     deleteCard.addEventListener("click",()=>{
         let idx = myLibrary.indexOf(book);
         myLibrary.splice(idx-1,1);
         card.remove()
     });
 
-    cardText5.append(deleteCard);
+    cardText5.append(changeStatus, deleteCard);
     card.append(cardText1,cardText2,cardText3,cardText4,cardText5);
     bookSection.append(card);
 }

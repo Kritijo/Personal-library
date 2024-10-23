@@ -92,12 +92,13 @@ button:active{
 }
 
 .card button{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .delete-div{
     display: flex;
     justify-content: center;
+    gap:10px;
 }
 
 dialog{

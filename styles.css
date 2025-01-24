@@ -1,3 +1,10 @@
+:root{
+    --headingColor : #f9d2c7;
+    --purple : #c7b9f5;
+    --buttonColor : #805cf5;
+    --shadow : 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +17,6 @@ body{
     flex-direction: column;
     justify-content: center;
     font-family: sans-serif;
-    background-color: #ffe4e6;
     text-align: center;
 }
 
@@ -19,7 +25,7 @@ img{
 }
 
 .heading{
-    background-color: #f43f5e;
+    background-color: var(--headingColor);
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -48,11 +54,11 @@ button{
     display: flex;
     gap:5px;
     align-items: center;
-    background-color: #3b82f6;
+    background-color: var(--buttonColor);
     padding: 5px 15px;
     border: none;
     border-radius: 40px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     font-size: 16px;
     font-weight: 600;
     color:white;
@@ -68,6 +74,9 @@ button:active{
 }
 
 .book-section{
+    background : url("./icons/library-concept-illustration.jpg");
+    background-size: contain;
+    background-repeat : no-repeat;
     flex:1;
     padding: 10px;
     display: grid;
@@ -80,9 +89,9 @@ button:active{
     max-height:200px;
     min-height: 200px;
     max-width: 500px;
-    background: linear-gradient(#bacce5,white);
+    background: linear-gradient(var(--purple),white);
     border-radius: 20px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     
     display: grid;
     grid-template-columns: 1fr;
@@ -103,8 +112,8 @@ button:active{
 
 dialog{
     border-radius: 33px;
-    border: 3px solid #9dbbe4;
-    background:linear-gradient(#9dbbe4,#bacce5,white);
+    border: none;
+    background:linear-gradient(var(--purple),white);
 }
 
 dialog[open]{
@@ -132,7 +141,7 @@ form input{
     font-size: 15px;
     border-radius: 20px;
     border:none;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
 }
 
 form input[type="checkbox"]{
